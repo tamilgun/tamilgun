@@ -53,14 +53,14 @@ layout: main
                     <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
                         {% include loader.html %}
                         {% if post.optimized_image %}
-                            <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                            <img style="border-radius: 10px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
                             <noscript>
-                                <img src="{{ post.optimized_image }}" width="100%">
+                                <img style="border-radius: 10px;" src="{{ post.optimized_image }}" width="100%">
                             </noscript>
                         {% elsif post.image %}
-                            <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
+                            <img style="border-radius: 10px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
                             <noscript>
-                                <img src="{{ post.image }}" width="100%">
+                                <img style="border-radius: 10px;" src="{{ post.image }}" width="100%">
                             </noscript>
                         {% else %}
                             <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
@@ -72,24 +72,16 @@ layout: main
                         {% include read-icon.html %}
                     </a>
                     <div class="box-info">
-                        <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
-                            {% include date.html date=post.date %}
-                        </time>
+                        <div class="date">
+                    <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
+                       {{ post.category }}
+                    </a>
+                        </div>
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                             <h2 class="post-title">
                                 {{ post.title }}
                             </h2>
                         </a>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                            <p class="description">{{ post.description }}</p>
-                        </a>
-                        <div class="tags">
-                            {% for tag in post.tags %}
-                                {% if tag != "" %}
-                                    <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
                     </div>
                 </div>
             </article>
