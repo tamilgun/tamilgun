@@ -48,15 +48,15 @@ layout: main
                 <div class="box-body">
                     <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
                         {% include loader.html %}
-                        {% if post.optimized_image %}
-                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                        {% if post.poster %}
+                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.poster }}" class="preload">
                             <noscript>
-                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.optimized_image }}" width="100%">
+                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.poster }}" width="100%">
                             </noscript>
-                        {% elsif post.image %}
-                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
+                        {% elsif post.poster %}
+                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.poster }}" class="preload">
                             <noscript>
-                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.image }}" width="100%">
+                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.poster }}" width="100%">
                             </noscript>
                         {% else %}
                             <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
@@ -71,7 +71,7 @@ layout: main
                         
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                             <h2 class="post-titcle" style="font-size: 20px;text-transform: capitalize;font-family: unset;font-weight: 500;">
-                                {{ post.title }}
+                                {{ post.seotitle }}
                             </h2>
                         </a>
                     </div>
