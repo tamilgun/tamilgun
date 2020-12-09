@@ -8,7 +8,7 @@ language: Multi
 quality: HD
 category: blog
 size: 90MB
-video: https://www.youtube.com/embed/t5LIlkhxl2s
+video: https://drive.google.com/file/d/1-Ii_1wIJkhc7eCgdLvnsDT5b80Pg7BPC/preview
 poster: https://www.residentevil.com/_asset/images/resistance-panel.jpg
 author: thiagorossener
 paginate: false
