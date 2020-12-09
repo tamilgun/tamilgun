@@ -70,7 +70,6 @@ collections:
       - label: "Size"
         name: "size"
         widget: "string"
-        
       - label: "Video Url"
         name: "video"
         widget: "string"
@@ -104,6 +103,7 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+        required: false
   - label: "Pages"
     name: "pages"
     folder: "pages"
