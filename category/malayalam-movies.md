@@ -1,5 +1,5 @@
 ---
 layout: category
-title: Malayalam Movies
+title: Kannada Movies
 slug: "{{slug}}"
 ---
