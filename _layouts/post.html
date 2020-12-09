@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}" class="no-js">
     {% include head.html %}
-     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
+    <link rel="stylesheet" href="https://hunzaboy.github.io/Ckin-Video-Player/dist/css/ckin.css"/>
+    <link rel="stylesheet" href="https://hunzaboy.github.io/Ckin-Video-Player/demoDist/demo.css"/>
     <body class="has-push-menu">
         {% include minutes-to-read.html %}
         {% include svg-icons.html %}
@@ -12,11 +13,9 @@
                 <h1 class="post-title">{{ page.title }}</h1>
                 <p class="post-subtitle">{{ page.category }}</p>
                 
-<div class="post-cover">
- <video class="afterglow" id="myvideo" width="" height="auto">
- <source type="video/mp4" src="{{ page.subtitle }}" />
- </video>
- </div>
+<video poster="{{ page.vidposter }}" src="{{ page.subtitle }}" data-ckin="default"></video>
+
+    <script src="https://hunzaboy.github.io/Ckin-Video-Player/dist/js/ckin.js"></script>
                 
                 {% include pagination-post.html progressBar=true %}
 
