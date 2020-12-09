@@ -1,5 +1,5 @@
 google_analytics: UA-XXXXXXXX-X
-show_modal_on_finish_post: true
+show_modal_on_finish_post: false
 medium_username: medium_username
 plugins:
   - jekyll-paginate
@@ -7,7 +7,7 @@ plugins:
 highlighter: rouge
 twitter_username: twitter_username
 use_logo: false
-show_time_bar: true
+show_time_bar: false
 instagram_username: instagram_username
 show_modal_on_exit: false
 name: TamilGun
@@ -42,7 +42,7 @@ collections:
   authors:
     output: true
 linkedin_username: linkedin_username
-version: v3.1.0
+version: live
 title: TamilGun | Watch and Download Tamil, Telugu, Hindi, Malaylam, Kannada,
   English, Movies and Web series 2020
 language: en
@@ -66,11 +66,11 @@ exclude:
   - Gemfile.lock
   - gulpfile.js
   - README.md
-show_get_theme_btn: true
+show_get_theme_btn: false
 show_hero: true
 email: youremail@test.com
 baseurl: ""
-two_columns_layout: true
+two_columns_layout: false
 menu:
   - title: Tamil Movies
     url: /category/tamil-movies
