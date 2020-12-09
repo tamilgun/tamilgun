@@ -51,15 +51,14 @@ collections:
         name: "subtitle"
         widget: "string"
         required: false
+      - label: "Poster Url"
+        name: "vidposter"
+        widget: "string"
+        required: false
       - label: "Description"
         name: "description"
         hint: "This will be used across the pages and for search engines."
         widget: "string"
-      - label: "Featured Image"
-        name: "image"
-        widget: "image"
-        allow_multiple: false
-        required: false
       - label: "Category"
         name: "category"
         widget: "relation"
