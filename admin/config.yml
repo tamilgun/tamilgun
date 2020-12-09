@@ -47,17 +47,17 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
-      - label: "Video Url"
-        name: "subtitle"
+      - label: "SEO Title"
+        name: "seotitle"
         widget: "string"
-        required: false
-      - label: "Poster Url"
-        name: "vidposter"
+      - label: "Year"
+        name: "year"
         widget: "string"
-        required: false
-      - label: "Description"
-        name: "description"
-        hint: "This will be used across the pages and for search engines."
+      - label: "Language"
+        name: "language"
+        widget: "string"
+      - label: "Quality"
+        name: "quality"
         widget: "string"
       - label: "Category"
         name: "category"
@@ -66,6 +66,23 @@ collections:
         searchFields: ["title"]
         valueField: "slug"
         displayFields: ["title"]
+        required: false
+      - label: "Size"
+        name: "size"
+        widget: "string"
+        
+      - label: "Video Url"
+        name: "video"
+        widget: "string"
+        required: false
+      - label: "Poster Url"
+        name: "poster"
+        widget: "string"
+        required: false
+      - label: "Description"
+        name: "description"
+        hint: "This will be used across the pages and for search engines."
+        widget: "string"
         required: false
       - label: "Tags"
         name: "tags"
