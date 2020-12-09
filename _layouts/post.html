@@ -7,22 +7,106 @@
     
    
     
-    
+    <style type="text/css">
+        .myButton {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:16px;
+	padding:10px 17px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.tg  {border-collapse:collapse;border-color:#aaa;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#aaa;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f38630;border-color:#aaa;border-style:solid;border-width:1px;color:#fff;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
     
     <body class="has-push-menu">
         {% include minutes-to-read.html %}
         {% include svg-icons.html %}
         {% include header.html %}
-
-
         <section class="post {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}">
             <article role="article" class="post-content">
-                <h1 class="post-title">{{ page.title }}</h1>
-                <p class="post-subtitle">{{ page.category }}</p>
+                <h1 class="post-title">{{ page.seotitle}}</h1>
                 
-<video poster="{{ page.vidposter }}" src="{{ page.subtitle }}" data-ckin="default"></video>
+<video poster="{{ page.poster }}" src="{{ page.video }}" data-ckin="default"></video>
 
     <script src="https://hunzaboy.github.io/Ckin-Video-Player/dist/js/ckin.js"></script>
+                
+                <table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Name</th>
+    <th class="tg-0lax">{{ page.seotitle }}</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Year</td>
+    <td class="tg-0lax">{{ page.year }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Language</td>
+    <td class="tg-0lax">{{ page.language }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Category</td>
+    <td class="tg-0lax">{{ page.category }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Quality</td>
+    <td class="tg-0lax">{{ page.quality }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Size</td>
+    <td class="tg-0lax">{{ page.size }}</td>
+  </tr>
+    <tr>
+    <td class="tg-0lax">Last Updated</td>
+    <td class="tg-0lax">{{ page.date }}</td>
+  </tr>
+</tbody>
+</table>
+                <center>
+                    <h2>Download {{ page.seotitle }}<h2>
+                    <a href="#" class="myButton">Download in 200MB</a>
+                        <br></br>
+                         <a href="#" class="myButton">Download in 250MB</a>
+                        <br></br>
+                         <a href="#" class="myButton">Download in 300MB</a>
+                        <br></br>
+                         <a href="#" class="myButton">Download in 350MB</a>
+                        <br></br>
+                         <a href="#" class="myButton">Download in 400MB</a>
+                        <br></br>
+                         <a href="#" class="myButton">Download in 450MB</a>
+                        <br></br>
+                        <a href="#" class="myButton">Download in 500MB</a>
+                        <br></br>
+                    <a href="#" class="myButton">Download in 700MB</a>
+                        <br></br>
+                    <a href="#" class="myButton">Download in 1GB</a>
+                        <br></br>
+                    <a href="#" class="myButton">Download in 2GB</a>
+                        <br></br>
+
+                        
+                </center>
                 
                 {% include pagination-post.html progressBar=true %}
 
