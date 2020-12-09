@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
 media_folder: "assets/img/uploads"
 collections:
   - label: "Categories"
@@ -61,12 +60,6 @@ collections:
         widget: "image"
         allow_multiple: false
         required: false
-      - label: "Optimized Image"
-        name: "optimized_image"
-        widget: "image"
-        allow_multiple: false
-        required: false
-        hint: "You can set an optimized image version to show on the home page"
       - label: "Category"
         name: "category"
         widget: "relation"
@@ -74,10 +67,12 @@ collections:
         searchFields: ["title"]
         valueField: "slug"
         displayFields: ["title"]
+        required: false
       - label: "Tags"
         name: "tags"
         hint: "Separate with commas. These will also be used as keywords for search engines."
         widget: "list"
+        required: false
       - label: "Author"
         name: "author"
         widget: "relation"
@@ -85,6 +80,7 @@ collections:
         displayFields: [display_name]
         searchFields: [display_name]
         valueField: "name"
+        required: false
       - label: "Paginate"
         name: "paginate"
         widget: "boolean"
@@ -193,7 +189,7 @@ collections:
     files:
       - label: "Site"
         name: "site"
-        file: "src/yml/site.yml"
+        file: "_config.yml"
         fields:
           - label: "Name"
             name: "name"
