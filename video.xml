@@ -2,14 +2,8 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
-      xsi:schemaLocation="
-            http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
             
     {% for post in site.posts limit:30 %}
   <url>
@@ -24,6 +18,9 @@ layout: null
          <video:publication_date>{{ post.date | date_to_iso8601 }}</video:publication_date>
          <video:player_loc allow_embed="yes" autoplay="ap=1">{{ post.video | xml_escape }}</video:player_loc>
          <video:duration>5616</video:duration>
+         <video:content_loc>{{ post.video | xml_escape }}</video:content_loc>
+         <video:family_friendly>yes</video:family_friendly>
+             <video:rating>5.0</video:rating>
        </video:video>
   </url>
   {% endfor %}
