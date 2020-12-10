@@ -18,7 +18,7 @@ layout: main
     {% if site.show_hero and paginator == nil or paginator.page == 1 %}
         <!-- Hero -->
         {% assign featured = posts.first %}
-        <section class="hero" style="background-image: url({{ featured.image }})">
+        <section class="hero" style="background-image: url({{ featured.poster }})">
             <div class="pixels"></div>
             <div class="gradient"></div>
             <div class="content">
@@ -29,12 +29,13 @@ layout: main
                         {{ featured.date | date: site.date_format }}
                     {% endif %}
                 </time>
-                <h1 class="title">{{ featured.title }}</h1>
+                <h1 class="title">{{ featured.seotitle }}</h1>
                 <p class="description">{{ featured.subtitle }}</p>
                 <div class="buttons">
                     <a href="{{ featured.url | prepend: site.baseurl }}" role="button" class="button">
-                        <svg><use xlink:href="#icon-read"></use></svg>
-                        <span>{{ site.translations.button.read_now | default: "Read Now" }}</span>
+                        
+<svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><circle cx="256" cy="256" fill="#ff6b6b" r="256"/><path d="m512 256h-512c0 141.385 114.615 256 256 256s256-114.615 256-256z" fill="#ff1f3d"/><g><g><path d="m185.999 401c-2.333 0-4.673-.543-6.827-1.645-5.016-2.564-8.172-7.722-8.172-13.355v-260c0-5.633 3.156-10.791 8.171-13.355s11.044-2.103 15.611 1.195l180 130c3.905 2.82 6.218 7.344 6.218 12.16s-2.313 9.34-6.218 12.16l-180 130c-2.605 1.882-5.686 2.84-8.783 2.84z" fill="#f9f9f9"/></g></g><g><path d="m171 256v130c0 5.633 3.156 10.791 8.171 13.355 2.154 1.102 4.495 1.645 6.827 1.645 3.097 0 6.179-.958 8.784-2.84l180-130c3.904-2.82 6.218-7.344 6.218-12.16z" fill="#e2dff4"/></g></g></svg>
+                        <span>{{ site.translations.button.read_now | default: "Watch Now" }}</span>
                     </a>
                 </div>
             </div>
@@ -48,15 +49,15 @@ layout: main
                 <div class="box-body">
                     <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
                         {% include loader.html %}
-                        {% if post.optimized_image %}
-                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                        {% if post.poster %}
+                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.poster }}" class="preload">
                             <noscript>
-                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.optimized_image }}" width="100%">
+                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.poster }}" width="100%">
                             </noscript>
-                        {% elsif post.image %}
-                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
+                        {% elsif post.poster %}
+                            <img style="border-radius: 10px 10px 0px 0px;" src="/assets/img/placeholder.png" width="100%" data-url="{{ post.poster }}" class="preload">
                             <noscript>
-                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.image }}" width="100%">
+                                <img style="border-radius: 10px 10px 0px 0px;" src="{{ post.poster }}" width="100%">
                             </noscript>
                         {% else %}
                             <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
@@ -71,7 +72,7 @@ layout: main
                         
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                             <h2 class="post-titcle" style="font-size: 20px;text-transform: capitalize;font-family: unset;font-weight: 500;">
-                                {{ post.title }}
+                                {{ post.seotitle }}
                             </h2>
                         </a>
                     </div>
