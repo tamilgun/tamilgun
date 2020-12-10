@@ -7,7 +7,7 @@ year: "2020"
 language: Tamil
 quality: HD
 category: "{{slug}}"
-size: 300MB
+size: 300 MB
 video: https://files.isaiminiweb.online/13%2520Aam%2520Number%2520Veedu/(%2520Telegram%2520%40isaiminidownload%2520)%2520-%252013%2520Aam%2520Number%2520Veedu%2520(2020)%2520Tamil%2520HDRip%2520-%2520400MB%2520-%2520x264%2520-%2520AAC%2520-%2520ESub.mkv?rootId=0AJtZkTkXLBuYUk9PVA
 poster: https://i.ytimg.com/vi/0qGbdv8k8Hs/maxresdefault.jpg
 paginate: false
