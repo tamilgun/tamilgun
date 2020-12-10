@@ -23,7 +23,7 @@ layout: null
          <video:description>{{ post.title | xml_escape }}</video:description>
          <video:publication_date>{{ post.date | date_to_iso8601 }}</video:publication_date>
          <video:player_loc allow_embed="yes" autoplay="ap=1">{{ post.video | xml_escape }}</video:player_loc>
-         <video:duration>1113</video:duration>
+         <video:duration>5616</video:duration>
        </video:video>
   </url>
   {% endfor %}
