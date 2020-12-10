@@ -16,7 +16,7 @@ paginate_path: /page/:num/
 sass:
   style: compressed
 markdown: kramdown
-url: ""
+url: "https://tamilgun.isaiminiweb.online"
 facebook_username: facebook_username
 sent_message_url: /contact/message-sent/
 paginate_content:
