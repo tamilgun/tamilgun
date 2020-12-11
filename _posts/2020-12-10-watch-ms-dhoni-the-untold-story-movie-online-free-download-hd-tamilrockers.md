@@ -8,7 +8,7 @@ language: Tamil
 quality: HD
 category: "{{slug}}"
 size: 808.37MB
-video: http://s21.uptofiles.net//files/Tamil%202020%20Movies/MS%20Dhoni%20The%20Untold%20Story%20(2016)/MS%20Dhoni%20The%20Untold%20Story%20(Original)/MS%20Dhoni%20The%20Untold%20Story%20(Tamil)/MS%20Dhoni%20The%20Untold%20Story%20(640x360)/MS%20Dhoni%20The%20Untold%20Story%202016%20HD.mp4
+video: https://ia802907.us.archive.org/18/items/Www.TamilMv.OrgM.S.Dhoni2016TamilBRRip720pX264DD5.12.5GBESub.mkv1/www.TamilMv.Org%20-%20M.S.%20Dhoni%20%282016%29%20Tamil%20BR-Rip%20-%20720p%20-%20x264%20-%20DD5.1%20-%202.5GB%20-%20ESub.mkv
 poster: https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/2656/532656-h
 description: ""
 paginate: false
