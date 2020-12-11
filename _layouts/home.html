@@ -106,25 +106,3 @@ layout: main
     {% assign social_urls = social_urls | append: '"https://www.linkedin.com/in/' | append: site.linkedin_username | append: '",' %}
 {% endif %}
 
-<script type="application/ld+json">
-{
-
-        {% assign limit = 8 %}
-        {% for post in posts limit: limit %}
-            {"@context":"https://schema.org",
-"@type":"VideoObject",
-"description":"{{ page.title }}{{ page.description }}",
-"duration":"PT1H56M0S",
-"embedUrl":"{{ page.video }}",
-"name":"{{ page.seotitle }}",
-"thumbnailUrl":["{{ page.poster }}"],
-"uploadDate":"{{ page.date | date: '%Y-%m-%d/' }}",
-"genre":"Entertainment",
-"author":"Tentrockers"
-
-               
-            }
-	    
-	    {% if forloop.last == false  %},{% endif %}
-        {% endfor %}
-</script>
