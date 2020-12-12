@@ -8,14 +8,14 @@ layout: null
     {% for post in site.posts limit:30 %}
   <url>
        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-       <lastmod>{{ post.date | date_to_iso8601 }}</lastmod>
+       <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
        <changefreq>daily</changefreq>
        <priority>1</priority>
        <video:video>
          <video:thumbnail_loc>{{ post.poster | xml_escape }}</video:thumbnail_loc> 
          <video:title>{{ post.seotitle | xml_escape }}</video:title>
          <video:description>{{ post.title | xml_escape }}</video:description>
-         <video:publication_date>{{ post.date | date_to_iso8601 }}</video:publication_date>
+         <video:publication_date>{{ post.date | date_to_rfc822 }}</video:publication_date>
          <video:player_loc allow_embed="yes" autoplay="ap=1">{{ post.video | xml_escape }}</video:player_loc>
          <video:duration>5616</video:duration>
          <video:content_loc>{{ post.video | xml_escape }}</video:content_loc>
