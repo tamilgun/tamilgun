@@ -3,11 +3,46 @@
     {% include head.html %}
 
     
-    <link rel="stylesheet" href="https://hunzaboy.github.io/Ckin-Video-Player/dist/css/ckin.css"/>
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
     
    
     
     <style type="text/css">
+	    @font-face{font-family:'Ruda';font-style:normal;font-weight:400;font-display:swap;src:local('Ruda Regular'),local('Ruda-Regular'),url(https://fonts.gstatic.com/s/ruda/v10/k3kfo8YQJOpFqnYdaObJ.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Ruda';font-style:normal;font-weight:400;font-display:swap;src:local('Ruda Regular'),local('Ruda-Regular'),url(https://fonts.gstatic.com/s/ruda/v10/k3kfo8YQJOpFqngdaA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Ruda';font-style:normal;font-weight:700;font-display:swap;src:local('Ruda Bold'),local('Ruda-Bold'),url(https://fonts.gstatic.com/s/ruda/v10/k3kQo8YQJOpFosM4fdfoLnnA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Ruda';font-style:normal;font-weight:700;font-display:swap;src:local('Ruda Bold'),local('Ruda-Bold'),url(https://fonts.gstatic.com/s/ruda/v10/k3kQo8YQJOpFosM4fdnoLg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Ruda';font-style:normal;font-weight:900;font-display:swap;src:local('Ruda Black'),local('Ruda-Black'),url(https://fonts.gstatic.com/s/ruda/v10/k3kQo8YQJOpFovs6fdfoLnnA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Ruda';font-style:normal;font-weight:900;font-display:swap;src:local('Ruda Black'),local('Ruda-Black'),url(https://fonts.gstatic.com/s/ruda/v10/k3kQo8YQJOpFovs6fdnoLg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+.rst_player{height:100%;overflow:hidden;font-family:Ruda,sans-serif;font-size:12px}
+.rst_player *{margin:0;padding:0}
+.rst_video{width:100%;background-color:#000;position:relative;overflow:hidden}
+.rst_video iframe{width:100%;height:100%;position:absolute;top:0;left:0;display:none;background-color:#000}
+.rst_server{width:100%;height:100%;position:absolute;top:0;left:0;display:none}
+.rst_server video{width:100%;height:100%;background-color:#000}
+.rst_list{width:100%;overflow:auto;background-color:#000}
+.rst_list li{list-style:none;clear:both;border:1px dashed #333;border-left:5px solid #444;overflow:hidden;cursor:pointer}
+.rst_list .selected{border-left:5px solid #3f51b5;background-color:#222222;border-right:3px solid #3f51b5}
+.rst_list .selected div h2:after{font-family:"Font Awesome 5 Free";content:"\f144";font-size:12px;font-weight:600;margin:0 0 0 5px;animation:flash 2s infinite}
+.rst_list img{float:left;width:80px;height:50px;margin:0 15px 0 0}
+.rst_list div h2{width:100%;color:#fff;font-size:120%;font-weight:400;line-height:50px;text-align:left;margin:0}
+.rst_control{width:100%;height:55px;line-height:53px;text-align:center;background:#3f3f3f;border-bottom:1px solid #1f1f1f}
+.rst_control .active{background-color:#000}
+.rst_button{background-color:#3f51b5;color:#fff;padding:8px 14px;cursor:pointer;margin:0 4px;border-radius:3px;box-shadow:0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)}
+.rst_loading{position:absolute;text-align:center;font-size:200%;z-index:9999;display:none;width:100%;height:100%}
+.st_loading{position:absolute;top:50%;left:50%;width:20px;height:20px;transform:translate(-50%,-50%)}
+.st_loading .circlex{position:absolute;border-radius:50%;left:1px;top:1px;width:18px;height:18px;background:#fff;animation:spinVideoFirstTurn 1.5s 0s infinite both}
+.st_loading .circley{position:absolute;border-radius:50%;width:20px;height:20px;background:#3f51b5;animation:spinVideoSecondTurn 1.4s 0s infinite both}
+.rst_player i.fab.fa-google-drive, .rst_player i.fab.fa-youtube, .rst_player i.fab.fa-vimeo, .rst_player i.fab.fa-facebook, .rst_player i.fas.fa-video{background:#ffffff;width:25px;height:25px;line-height:25px;text-align:center;border-radius:100%;margin:0 5px 0 0}
+.rst_player i.fab.fa-google-drive{color:#2c9f45}
+.rst_player i.fab.fa-youtube{color:#DA5E4C}
+.rst_player i.fab.fa-vimeo{color:#1ab7ea}
+.rst_player i.fab.fa-facebook{color:#3b5998}
+.rst_player i.fas.fa-video{color:#ee8208;font-size:12px}
+@-webkit-keyframes flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}
+@keyframes flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}
+@keyframes spinVideoFirstTurn{0%,100%{box-shadow:0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5}50%{transform:rotate(180deg)}25%,75%{box-shadow:28px 0 0 #3f51b5,-28px 0 0 #3f51b5,0 28px 0 #3f51b5,0 -28px 0 #3f51b5,20px -20px 0 #3f51b5,20px 20px 0 #3f51b5,-20px -20px 0 #3f51b5,-20px 20px 0 #3f51b5}100%{transform:rotate(360deg);box-shadow:0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5}}
+@keyframes spinVideoSecondTurn{0%,100%{box-shadow:0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5}50%{transform:rotate(-180deg)}25%,75%{box-shadow:52px 0 0 #3f51b5,-52px 0 0 #3f51b5,0 52px 0 #3f51b5,0 -52px 0 #3f51b5,38px -38px 0 #3f51b5,38px 38px 0 #3f51b5,-38px -38px 0 #3f51b5,-38px 38px 0 #3f51b5;background:transparent}100%{transform:rotate(-360deg);box-shadow:0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5,0 0 0 #3f51b5}}
         .myButton {
 	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
 	background-color:#c62d1f;
@@ -35,6 +70,19 @@
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
+	
+	<script type='text/javascript'>
+//<![CDATA[
+var getPlayerOptions = {
+    playerContainer: "#videox_player",
+    playerRatio: "16:9",
+    playerMobile: "600",
+    playerDesktop: "70%",
+    playerResponsive: true
+}
+//]]>
+</script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
     
     <body class="has-push-menu">
         {% include minutes-to-read.html %}
@@ -44,9 +92,14 @@
             <article role="article" class="post-content">
                 <h1 class="post-title">{{ page.seotitle}}</h1>
                 
-<video data-color="red" autoplay poster="{{ page.poster }}" src="{{ page.video }}" data-ckin="default"></video>
-
-    <script src="https://hunzaboy.github.io/Ckin-Video-Player/dist/js/ckin.js"></script>
+<div id="videox_player"/>
+<script type="text/javascript">
+//<![CDATA[
+getPlayerOptions.playerList = [
+{"file": "{{ page.video }}","title": "Server 1"},
+];
+//]]>
+</script>
                 
                 <table class="tg">
 
@@ -197,5 +250,11 @@
 </script>
 	   
 	    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',3762709,document.body||document.documentElement)</script>
-    </body>
+    <script type='text/javascript'>
+//<![CDATA[
+function getVideoPlaylist(i){if("undefined"!=typeof $){if(void 0!==i.playerList){var e,s,d=[],t=[],n=[],a=[],l="",o=0,f=0,r=7,c=4,v=50,p=$(i.playerContainer),h=p.width(),g=i.playerRatio.split(":");g=g[1]/g[0];for(var u=0;u<i.playerList.length;u++)d.push(i.playerList[u].file),t.push(i.playerList[u].title),n.push(i.playerList[u].description),a.push(i.playerList[u].image);for(l+='<div class="rst_player">',l+='<div class="rst_video"><span class="rst_loading"><div class="st_loading"><div class="circlex"></div><div class="circley"></div></div></span>',l+='<iframe id="video_player" src="" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>',l+='<div class="rst_server"></div>',l+="</div>",l+='<div class="rst_videos">',l+='<ul class="rst_list"></ul>',l+='<div class="rst_control">',l+='<span class="sd_prevPage rst_button"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i></span>',l+='<span class="sd_prev rst_button"><i class="fas fa-chevron-left"></i></span>',l+='<span class="sd_next rst_button"><i class="fas fa-chevron-right"></i></span>',l+='<span class="sd_nextPage rst_button"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span>',l+="</div>",l+="</div>",l+="</div>",p.html(l),l="",u=0;u<t.length;u++)l+="<li>",l+='<img src="',m(d[u])?l+="http://i3.ytimg.com/vi/"+m(d[u])+"/hqdefault.jpg":d[u].indexOf("vimeo")>-1||d[u].indexOf("vid")>-1||d[u].indexOf("google")>-1?l+="https://1.bp.blogspot.com/-8TcMxpoFBI8/XXfVXz0RfoI/AAAAAAAAAgg/AIlcAyY03T4N2Hy0U1C6yJzmXFVEMzfEgCLcBGAs/s1600/video_logo.jpg":l+=a[u],l+='" />',l+="<div>",l+="<h2>",l+='<i class="',m(d[u])?l+="fab fa-youtube":d[u].indexOf("vimeo")>-1?l+="fab fa-vimeo":d[u].indexOf("google")>-1?l+="fab fa-google-drive":d[u].indexOf("ok.ru")>-1?l+="fas fa-video":d[u].indexOf("facebook")>-1?l+="fab fa-facebook":l+="fa-file",l+="",l+='"></i> ',l+=t[u]+"</h2>",l+="</div>",l+="</li>";for(p.find(".rst_list").html(l),u=0;u<t.length;u++)d[u].indexOf("vimeo")>-1&&$.ajax({type:"GET",url:"http://vimeo.com/api/v2/video/"+d[u].substring(d[u].lastIndexOf("/")+1)+".json",jsonp:"callback",dataType:"jsonp",indexValue:u,success:function(i){var e=i[0].thumbnail_large;p.find(".rst_list").find("li").eq(this.indexValue).find("img").attr("src",e)}});$.getScript("http://f.vimeocdn.com/js/froogaloop2.min.js"),$.getScript("https://www.youtube.com/iframe_api");var _=!1;window.onYouTubeIframeAPIReady=function(){y()},p.find(".rst_list").click(function(){s=!0}),p.find(".rst_list").find("li").outerHeight(v),p.find(".rst_list").find("li").each(function(i){$(this).click(function(){var e,t;o=i,p.find(".rst_list").find("li").eq(i).hasClass("selected")||(p.find(".rst_list").find("li").removeClass("selected").eq(i).addClass("selected"),t=e=d[i],p.find(".rst_server").find("video").remove(),p.find(".rst_server").hide(),p.find("iframe").attr("src","").hide(),p.find(".rst_loading").show(),m(e)?(t="https://www.youtube.com/embed/"+m(e)+"?autoplay=1&loop=1&showinfo=0&rel=0&enablejsapi=1",s&&(t="https://www.youtube.com/embed/"+m(e)+"?autoplay=1&loop=1&showinfo=0&rel=0&enablejsapi=1"),p.find("iframe").attr("src",t).show(),_&&y()):e.indexOf("vimeo")>-1?(t="https://player.vimeo.com/video/"+e.substring(e.lastIndexOf("/")+1),s?p.find("iframe").attr("src",t+"?api=1&amp;player_id=video_player&amp;autoplay=1").show():p.find("iframe").attr("src",t+"?api=1&amp;player_id=video_player").show(),void 0!==p.find("iframe")[0].addEvent&&p.find("iframe")[0].addEvent("ready",function(i){p.find("iframe")[0].addEvent("finish",function(){s=!0,k()})})):e.indexOf("google")>-1?p.find("iframe").attr("src",t).show():e.indexOf("vid")>-1?p.find("iframe").attr("src",t).show():(l="",l+=s?'<video width="100%" height="100%" controls autoplay>':'<video width="100%" height="100%" controls>',l+='<source src="'+t.replace(".ogg",".mp4")+'" type="video/mp4">',l+='<source src="'+t.replace(".mp4",".ogg")+'" type="video/ogg">',l+="</video>",p.find(".rst_server").show().html(l),p.find("video").bind("ended",function(){s=!0,k()})),p.find("iframe").load(function(){p.find(".rst_loading").hide()}),w())})}),w(),$(window).resize(function(){b()}),b(),p.find(".rst_list").scroll(function(){x($(this))}),x(p.find(".rst_list")),p.find(".sd_prevPage").click(function(){$(this).hasClass("active")&&(f=p.find(".rst_list").scrollTop()-e*p.find(".rst_list").find("li").outerHeight(),f=Math.ceil(f/v),p.find(".rst_list").animate({scrollTop:f*v},500))}),p.find(".sd_prev").click(function(){o>0&&(o--,w(),O("prev"),p.find(".rst_list").find("li").eq(o).trigger("click"))}),p.find(".sd_next").click(function(){o<d.length-1&&(o++,w(),O("next"),p.find(".rst_list").find("li").eq(o).trigger("click"))}),p.find(".sd_nextPage").click(function(){$(this).hasClass("active")&&(f=p.find(".rst_list").scrollTop()+e*v,f=Math.ceil(f/v),p.find(".rst_list").animate({scrollTop:f*v},500))}),p.find(".rst_list").animate({scrollTop:0},10),p.find(".rst_list").find("li").eq(0).trigger("click"),$(document).ready(function(){$("").remove()})}}else alert("Please insert jQuery library!");function m(i){return i.indexOf("watch?v")>-1?i.substring(i.indexOf("?v=")+3):(i.indexOf("youtube")>-1||i.indexOf("youtu.be")>-1)&&i.substring(i.lastIndexOf("/")+1)}function y(){_=!0,new YT.Player("video_player",{events:{onStateChange:function(i){switch(i.data){case YT.PlayerState.ENDED:s=!0,k()}}}})}function w(){o>0?p.find(".sd_prev").addClass("active"):p.find(".sd_prev").removeClass("active"),o<d.length-1?p.find(".sd_next").addClass("active"):p.find(".sd_next").removeClass("active")}function b(){$(window).width()<i.playerMobile||!i.playerResponsive?(e=c,i.playerResponsive&&p.width($(window).width()),p.removeClass("rst_desktop"),p.find(".rst_list").height(e*v),p.find(".rst_video").height(p.find(".rst_video").width()*g),p.find(".rst_video").width("100%"),p.find(".rst_videos").width("100%")):(e=r,p.addClass("rst_desktop"),p.width(h),p.find(".rst_list").height(e*(v-.8)),p.find(".rst_video").height(p.find(".rst_videos").outerHeight()),p.find(".rst_video").css("width",i.playerDesktop),p.find(".rst_videos").css("width",100-parseInt(i.playerDesktop)+"%"))}function x(i){i.scrollTop()>0?p.find(".sd_prevPage").addClass("active"):p.find(".sd_prevPage").removeClass("active"),i[0].scrollHeight>=i.outerHeight()+i.scrollTop()+5?p.find(".sd_nextPage").addClass("active"):p.find(".sd_nextPage").removeClass("active")}function O(i){var s=p.find(".rst_list").scrollTop(),d=s+p.find(".rst_list").outerHeight(),t=p.find(".rst_list").find("li").eq(o).offset().top-p.find(".rst_list").find("li").eq(o).parent().offset().top+p.find(".rst_list").find("li").eq(o).outerHeight();return(t+s+10>=d+p.find(".rst_list").find("li").eq(o).outerHeight()||t<1)&&(f=o*v,"prev"==i&&(f=(o-e+1)*v),p.find(".rst_list").animate({scrollTop:f},500)),!0}function k(){o<d.length-1&&(o++,w(),O("next"),p.find(".rst_list").find("li").eq(o).trigger("click"))}}var timer=setInterval(function(){"undefined"!=typeof getPlayerOptions&&(new getVideoPlaylist(getPlayerOptions),clearInterval(timer))},50);
+//]]>
+</script>
+
+	</body>
 </html>
