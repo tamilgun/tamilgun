@@ -1,8 +1,8 @@
 ---
 date: 2020-12-12 08:55:27
 layout: post
-title: Watch Mookuthi Aamman on Tamilgun
-seotitle: Mookuthi Aamman
+title: Watch Mookuthi Amman on Tamilgun
+seotitle: Mookuthi Amman
 year: "2020"
 language: Tamil
 quality: HD
