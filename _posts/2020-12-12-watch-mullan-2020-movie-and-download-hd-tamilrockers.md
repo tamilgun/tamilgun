@@ -1,7 +1,7 @@
 ---
 date: 2020-12-12 22:01:48
 layout: post
-title: Watch Mullan (2020) Movie and Download HD Tamilrockers
+title: Mullan
 seotitle: Mullan
 year: "2020"
 language: Tamil
