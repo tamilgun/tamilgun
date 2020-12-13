@@ -1,7 +1,7 @@
 ---
 date: 2020-12-11 09:20:40
 layout: post
-title: Watch Ala Vaikunthapurramuloo Movie and Download HD Tamilrockers
+title: Ala Vaikunthapurramuloo
 seotitle: Ala Vaikunthapurramuloo
 year: "2020"
 language: Telugu
