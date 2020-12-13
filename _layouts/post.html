@@ -46,7 +46,7 @@
         {% include header.html %}
         <section class="post {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}">
             <article role="article" class="post-content">
-                <h1 class="post-title">{{ page.seotitle}}</h1>
+                <h1 class="post-title">{{ page.title}}</h1>
 
                 <video data-color="red" autoplay poster="{{ page.poster }}" src="{{ page.video }}" data-ckin="default"></video>
 
@@ -56,7 +56,7 @@
 <tbody>
   <tr> 
     <td class="tg-0lax">Name</td>
-    <td class="tg-0lax">{{ page.seotitle }}</td>
+    <td class="tg-0lax">{{ page.title }}</td>
   </tr>
   <tr>
     <td class="tg-0lax">Year</td>
@@ -81,7 +81,7 @@
 </tbody>
 </table>
                 <center>
-                    <h2>Download {{ page.seotitle }}</h2>
+                    <h2>Download {{ page.title }}</h2>
                     <a href="//stawhoph.com/afu.php?zoneid=3762702" style=" color: white; " class="myButton">Download in 200MB</a>
                          <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 250MB</a>
                          <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 300MB</a>
@@ -191,7 +191,7 @@
 "description":"{{ page.title }}{{ page.description }}",
 "duration":"PT1H56M0S",
 "embedUrl":"{{ page.video }}",
-"name":"{{ page.seotitle }}",
+"name":"{{ page.title }}",
 "thumbnailUrl":["{{ page.poster }}"],
 "uploadDate":"{{ page.date | date: '%Y-%m-%d/' }}",
 "genre":"Entertainment",
