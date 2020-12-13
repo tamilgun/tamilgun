@@ -1,7 +1,7 @@
 ---
 date: 2020-12-10 22:39:06
 layout: post
-title: Watch Irandam Kuththu Movie and Download HD Tamilrockers
+title: Irandam Kuththu
 seotitle: Irandam Kuththu
 year: "2020"
 language: Tamil
