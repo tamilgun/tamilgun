@@ -64,14 +64,6 @@ collections:
         valueField: "slug"
         displayFields: ["title"]
         required: false
-      - label: "Category 1"
-        name: "category"
-        widget: "relation"
-        collection: "categories"
-        searchFields: ["title"]
-        valueField: "slug"
-        displayFields: ["title"]
-        required: false
       - label: "Size"
         name: "size"
         widget: "string"
