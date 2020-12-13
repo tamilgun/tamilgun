@@ -1,7 +1,7 @@
 ---
 date: 2020-12-12 12:13:16
 layout: post
-title: Watch Jumanji The Next Level Movie and Download HD Tamilrockers
+title: Jumanji The Next Level
 seotitle: "Jumanji: The Next Level"
 year: "2020"
 language: Tamil, Hindi, Telugu, English
