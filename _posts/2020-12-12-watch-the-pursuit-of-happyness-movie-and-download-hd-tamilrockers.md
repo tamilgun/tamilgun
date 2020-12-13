@@ -1,7 +1,7 @@
 ---
 date: 2020-12-12 12:15:19
 layout: post
-title: Watch The Pursuit of Happyness Movie and Download HD Tamilrockers
+title: The Pursuit of Happyness
 seotitle: The Pursuit of Happyness
 year: "2020"
 language: Telugu + Tamil + Hindi + Eng
