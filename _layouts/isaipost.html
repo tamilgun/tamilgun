@@ -9,7 +9,7 @@
 <meta name="rating" content="General" />
 <meta name="robots" content="index, follow" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="https://hunzaboy.github.io/Ckin-Video-Player/dist/css/ckin.css"/>
+<link rel="stylesheet" href="/video.css"/>
  
  
 <style>
@@ -64,8 +64,13 @@ border : 1px solid silver;
 </div>
 
 <div class="line">Watch {{ page.title }} Online</div>
-<video data-color="red" autoplay poster="{{ page.poster }}" src="{{ page.video }}" data-ckin="default"></video>
-<script src="https://hunzaboy.github.io/Ckin-Video-Player/dist/js/ckin.js"></script>
+	
+	<video id="video1" width="100%" height="auto" controls>
+            <source src="{{ page.video }}" type="video/mp4">
+            Follow Telegram @isaiminidownload.
+        </video>
+	
+<script src="/video.js"></script>
 
 <div class="line">About {{ page.title }}</div>
 
