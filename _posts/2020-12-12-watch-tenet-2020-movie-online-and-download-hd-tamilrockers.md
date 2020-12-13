@@ -1,7 +1,7 @@
 ---
 date: 2020-12-12 22:03:08
 layout: post
-title: Watch Tenet (2020) Movie Online and Download HD Tamilrockers
+title: Tenet
 seotitle: Tenet
 year: "2020"
 language: Tamil
