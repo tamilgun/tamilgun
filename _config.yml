@@ -16,7 +16,7 @@ paginate_path: /page/:num/
 sass:
   style: compressed
 markdown: kramdown
-url: "https://tamilgun.isaiminiweb.online"
+url: https://tamilgun.isaiminiweb.online
 facebook_username: facebook_username
 sent_message_url: /contact/message-sent/
 paginate_content:
@@ -43,8 +43,7 @@ collections:
     output: true
 linkedin_username: linkedin_username
 version: live
-title: TamilGun | Watch and Download Tamil, Telugu, Hindi, Malaylam, Kannada,
-  English, Movies and Web series 2020
+title: TamilGun
 language: en
 description: Watch and Download Tamil, Telugu, Hindi, Malayalam, Kannada,
   English, Movies and Web series 2020
