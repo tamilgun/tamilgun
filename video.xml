@@ -13,7 +13,7 @@ layout: null
        <priority>1</priority>
        <video:video>
          <video:thumbnail_loc>{{ post.poster | xml_escape }}</video:thumbnail_loc> 
-         <video:title>{{ post.seotitle | xml_escape }}</video:title>
+         <video:title>Watch {{ post.title | xml_escape }} Movie Online for Free Anytime on {{ site.title | xml_escape }}</video:title>
          <video:description>{{ post.title | xml_escape }}</video:description>
          <video:publication_date>{{ post.date | date_to_rfc822 }}</video:publication_date>
          <video:player_loc allow_embed="yes" autoplay="ap=1">{{ post.video | xml_escape }}</video:player_loc>
