@@ -1,7 +1,7 @@
 ---
 date: 2020-12-12 11:55:41
 layout: post
-title: Watch The Outpost Movie and Download HD Tamilrockers
+title: The Outpost
 seotitle: The Outpost
 year: "2020"
 language: Tamil
