@@ -2,26 +2,36 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-            
-    {% for post in site.posts limit:30 %}
-  <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"> 
+
+
+			<url>
+			  <loc>{{ site.url }}</loc>
+			  <changefreq>weekly</changefreq>
+			  <priority>1.0</priority>
+			</url>
+    
+        {% for post in site.posts limit:30 %}
+<url>
        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-       <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1</priority>
-       <video:video>
-         <video:thumbnail_loc>{{ post.poster | xml_escape }}</video:thumbnail_loc> 
-         <video:title>{{ post.title | xml_escape }}</video:title>
-         <video:description>{{ post.title | xml_escape }}</video:description>
-         <video:publication_date>{{ post.date | date_to_rfc822 }}</video:publication_date>
-         <video:player_loc allow_embed="yes" autoplay="ap=1">{{ post.video | xml_escape }}</video:player_loc>
-         <video:duration>5616</video:duration>
-         <video:content_loc>{{ post.video | xml_escape }}</video:content_loc>
-         <video:family_friendly>yes</video:family_friendly>
-             <video:rating>5.0</video:rating>
-       </video:video>
-  </url>
-  {% endfor %}
+        <priority>0.4</priority>
+<video:video>
+<video:thumbnail_loc>{{ post.poster | xml_escape }}</video:thumbnail_loc> 
+<video:title>{{ post.title | xml_escape }}</video:title>
+<video:description>{{ post.title | xml_escape }}</video:description>
+<video:content_loc>{{ post.video | xml_escape }}</video:content_loc>
+<video:duration>5616</video:duration>
+<video:requires_subscription>yes</video:requires_subscription>
+<video:family_friendly>yes</video:family_friendly>
+<video:player_loc allow_embed="yes" autoplay="ap=1">{{ post.video | xml_escape }}</video:player_loc>
+<video:uploader info="{{ site.url }}">{{ site.title }}</video:uploader>
+<video:live>no</video:live>
+<video:tag></video:tag>
+</video:video>
+        <changefreq>weekly</changefreq>
+        </url>
+          {% endfor %}
+    
 </urlset>
