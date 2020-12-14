@@ -1,6 +1,7 @@
 google_analytics: UA-XXXXXXXX-X
 show_modal_on_finish_post: false
 medium_username: medium_username
+paginate: 5
 plugins:
   - jekyll-paginate
   - jekyll-paginate-content
