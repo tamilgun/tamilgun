@@ -76,9 +76,20 @@ border : 1px solid silver;
 
 {% for post in paginator.posts %}
 	<div style=" text-transform: capitalize;" class="f">
-	 
 	<b>{{ post.title }} ({{ post.year }}) [{{ post.quality }}] </b> Latest {{ post.language }} Movie Download HD Movie Mp4 HD <a href="{{ BASE_PATH }}{{ post.url }}"><span style="color: green;">Download Now</span></a>
-		
+		 <script type="application/ld+json">
+{"@context":"https://schema.org",
+"@type":"VideoObject",
+"description":"Watch {{ post.title }} on {{ site.title }} and Download Free",
+"duration":"PT1H56M0S",
+"embedUrl":"{{ post.video }}",
+"name":"{{ post.title }}",
+"thumbnailUrl":["{{ post.poster }}"],
+"uploadDate":"{{ post.date | date: '%Y-%m-%d/' }}",
+"genre":"Entertainment",
+"author":"Tentrockers"
+}
+</script>
 		</div>
 {% endfor %}  
 {% include pagination-home.html %}
@@ -101,31 +112,7 @@ border : 1px solid silver;
 <div class="line"> © Tentrockers<br/>All Right Reserved</div>
 	
 	
-	<script type="application/ld+json">
-	{
-        "@type": "ItemList",
-        "itemListElement": [
-        {% assign limit = 8 %}
-        {% for post in posts limit: limit %}
-            {% assign author = site.authors | where: "name", post.author | first %}
-           {"@context":"https://schema.org",
-"@type":"VideoObject",
-"description":"Watch {{ post.title }} on {{ site.title }} and Download Free",
-"duration":"PT1H56M0S",
-"embedUrl":"{{ post.video }}",
-"name":"{{ post.title }}",
-"thumbnailUrl":["{{ post.poster }}"],
-"uploadDate":"{{ post.date | date: '%Y-%m-%d/' }}",
-"genre":"Entertainment",
-"isFamilyFriendly": "true",
-"author":"Tentrockers"
-            }{% if forloop.last == false  %},{% endif %}
-        {% endfor %}
-        ]
-    }
-  }
-}
-</script>
+
 	
 </body>
 </html>
