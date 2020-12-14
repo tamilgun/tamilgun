@@ -117,6 +117,7 @@ border : 1px solid silver;
 "thumbnailUrl":["{{ post.poster }}"],
 "uploadDate":"{{ post.date | date: '%Y-%m-%d/' }}",
 "genre":"Entertainment",
+"isFamilyFriendly": "true",
 "author":"Tentrockers"
             }{% if forloop.last == false  %},{% endif %}
         {% endfor %}
