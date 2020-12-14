@@ -1,58 +1,82 @@
-<!DOCTYPE html>
-<html lang="{{ site.language }}" class="no-js">
-	
-    {% include head.html %}
-<link rel="stylesheet" href="https://hunzaboy.github.io/Ckin-Video-Player/dist/css/ckin.css"/>
-    
-    
-   
-    
-    <style type="text/css">
-        .myButton {
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-	background-color:#c62d1f;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:16px;
-	padding:10px 17px;
-	text-decoration:none;
+<html>
+<head>
+<meta name="language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{ page.title }} ({{ page.year }}) Movie Download and Watch Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ page.title }} movie download isaimini {{ page.title }} {{ page.language }} movie download {{ page.quality }} {{ page.year }}" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="robots" content="index, follow" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/video.css"/>
+ 
+ 
+<style>
+body {padding: 0; margin:0 auto; max-width: 700px; font-family: Verdana; font-weight: normal; background: #f9f9f9; font-size: 13px;}
+a {text-decoration : none; color: #3b3b3b;}
+a {color:#3b3b3b;}
+input,textarea,select{margin:1px;border:1px solid #ddd;max-width:80%;background:#fff;color:grey;font-size:small;}
+input[type='submit']{color : #6d6d6d;
+background-color : #fbfbfb;
+background-repeat : repeat-x;
+border : 1px solid #ededed;margin:1px;}
+input:hover, input:focus{  -moz-box-shadow: 0 0 10px #6699ff;
+-webkit-box-shadow: 0 0 10px #6699ff;
+box-shadow: 0px 0px 10px #6699ff;}
+.line{background-color: #308bcf; color: #ffffff;  font-weight: bold; padding: 10px 10px 10px 10px; text-align: center; text-decoration: none; margin-bottom: 0px; font-size: small;}
+.Adz {color: red; font-weight: bold; font-size: small;
 }
-.myButton:hover {
-	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-	background-color:#f24437;
+.Adz a { color:  red;}
+.aut{border-radius:8px; color:#fff; padding:5px 5px; border-color:#95d1ec; border-style:groove ridge ridge groove; border-width:2px; background:#36a8da repeat-x 50%top}
+.aut:before{height:25px; margin-top:-4px; margin-bottom:-19px; display:block;}
+.aut a{color:#fff; border-bottom:1px dotted #b5def0}
+.aut a:hover{color:#d8eff8; border-bottom:1px dotted #b5def0; background:transparent}
+.Tag{padding: 3px; background-color: #eff3f6;}
+.form{margin: 1px; padding: 3px;  border: 1px solid #ececec; }
+.Adz a img{ height:auto; width:auto; max-width:99% }
+.none{display:noe}
+ .isaimini a img {display:one }
+.f {color: #4f4f4f ; background: #f9f9f9; padding-top: 8px; padding-left: 3px; padding-bottom: 2px; font-size: 14px; text-align: left; border-bottom: 1px dotted #afcddc; }
+.tblimg {padding:1px 1px 2px 2px;
+text-align : left;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
+.tblimg img {padding:1px;
+border : 1px solid silver;
 }
-
-.tg  {border-collapse:collapse;border-color:#aaa;border-spacing:0;}
-.tg td{background-color:#fff;border-color:#aaa;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f38630;border-color:#aaa;border-style:solid;border-width:1px;color:#fff;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-	    
+.isaiminida{margin: 1px; padding: 3px; border: 1px solid #ececec; }
+.isaiminida a { color:  red;}
+.bg{border-left: 4px solid #c3eff2; padding: 0 0 4px 6px; margin: 0 2px 0 4px;}
+.bf { border-left: 4px solid #c3eff2; padding: 0 0 4px 6px; margin: 0 2px 0 4px; }
+.bottom { color: #d26c24; background: #ede9dd; position: relative; z-index: 1; font-weight: bold; padding: 10px; border-bottom: 1px solid #ddd7c6; text-shadow: 0px 1px 0px #ffffff; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4); -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4); -webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4); }
+.de { background-color: #f1f1f1; color: #444444; padding: 3px; font-size: 13px; font-family: arial,sans-serif; margin-top: 0px; margin-bottom: 0px; padding-left: 5px; padding-top: 5px; }
+.ok, .msg { background: #fff8cc; border: 1px solid #ffe222; padding: 10px; font-weight: normal; color: #000; }
+.error { background: #fff8cc; border: 1px solid #ffe222; padding: 10px; font-weight: normal; color: red; }
+.isai { background-color: #f1f1f1; color: #444444; padding: 3px; font-size: 13px; font-family: arial,sans-serif; margin-top: 0px; margin-bottom: 0px; padding-left: 5px; padding-top: 5px; }
 </style>
+</head>
+<body>
+
+<div class="line"><font size="4px">{{ site.name }}</font><br/><small>Name Of Quality</small></div>
+<div class="bottom" align="center">Like our <a href="https://facebook.com/isaimini.co"><font color="red">Facebook Fan Page</font></a> & Get Updates and News!
+<div class="Adz">
+</div>
+</div>
+
+<div class="line">Watch {{ page.title }} Online</div>
 	
+	<video id="video1" width="700px" height="auto" controls>
+            <source src="{{ page.video }}" type="video/mp4">
+            Follow Telegram @isaiminidownload.
+        </video>
+	
+<script src="/video.js"></script>
 
-  
-    
-    <body class="has-push-menu">
-        {% include minutes-to-read.html %}
-        {% include svg-icons.html %}
-        {% include header.html %}
-        <section class="post {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}">
-            <article role="article" class="post-content">
-                <h1 class="post-title">{{ page.title}}</h1>
+<div class="line">About {{ page.title }}</div>
 
-                <video data-color="red" autoplay poster="{{ page.poster }}" src="{{ page.video }}" data-ckin="default"></video>
-
-    <script src="https://hunzaboy.github.io/Ckin-Video-Player/dist/js/ckin.js"></script>
-                <table class="tg">
-
+<div class="isai" align="left">
+<div class="pr">
+<table cellspacing="5">
 <tbody>
   <tr> 
     <td class="tg-0lax">Name</td>
@@ -78,117 +102,36 @@
     <td class="tg-0lax">Last Updated</td>
     <td class="tg-0lax">{{ page.date }}</td>
   </tr>
-</tbody>
-</table>
-                <center>
-                    <h2>Download {{ page.title }}</h2>
-                    <a href="//stawhoph.com/afu.php?zoneid=3762702" style=" color: white; " class="myButton">Download in 200MB</a>
-                         <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 250MB</a>
-                         <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 300MB</a>
-                         <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 350MB</a>
-                         <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 400MB</a>
-                         <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 450MB</a>
-                        <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 500MB</a>
-                    <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 700MB</a>
-                    <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 1GB</a>
-                    <a href="//stawhoph.com/afu.php?zoneid=3762702" style="color: white;" class="myButton">Download in 2GB</a>
-
-                        
-                </center>
-                
-                {% include pagination-post.html progressBar=true %}
-
-                {% include toc.html %}
-
-                {{ content }}
-
-                {% include pagination-post.html %}
-            </article>
-
-            {% if site.two_columns_layout %}
-                <aside class="see-also">
-                    <h2>{{ site.translations.text.see_also | default: "Must Watch" }}</h2>
-                    <ul>
-                        {% assign next_posts = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" %}
-                        {% assign shuffled_array = next_posts | shuffle %}
-                        {% for post in shuffled_array limit:5 %}
-                            <li style=" background: black; border-radius: 10px;">
-                                <a href="{{ post.url | prepend: site.baseurl }}">
-                                    {% if post.optimized_image %}
-                                        <img style=" border-radius: 10px;" src="{{ post.optimized_image }}">
-                                    {% elsif post.image %}
-                                        <img style=" border-radius: 10px;" src="{{ post.image }}">
-                                    {% else %}
-                                        <img style=" border-radius: 10px;" src="/assets/img/off.jpg">
-                                    {% endif %}
-                                    <h3 style=" color: white; padding: 10px;" >{{ post.title }}</h3>
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </aside>
-            {% endif %}
-
-        </section>
-
-        <!-- Add time bar only for pages without pagination -->
-        {% if paginator.activated == nil and site.show_time_bar == true %}
-            {% include time-bar.html %}
-            {% include recommendation.html %}
-        {% endif %}
-
-        <!-- Show modal if the post is the last one -->
-        {% if paginator.is_last and site.show_modal_on_finish_post %}
-            {% include modal.html title="You made it!" subtitle="Why don't you try another?" %}
-        {% endif %}
-
-        <!-- Show modal before user leaves the page -->
-        {% if site.show_modal_on_exit %}
-            {% include modal.html title="Don't go yet!" subtitle="You may also like..." closed=true showOnExit=true %}
-        {% endif %}
-
-        
-        {% include share.html %}
+</tbody></table></div></div>
 
 
-        {% assign author = site.authors | where: "name", post.author | first %}
-
-        {% assign author_urls = '' %}
-        {% if author.github_username %}
-            {% assign author_urls = author_urls | append: '"https://github.com/' | append: author.github_username | append: '",' %}
-        {% endif %}
-        {% if author.facebook_username %}
-            {% assign author_urls = author_urls | append: '"https://www.facebook.com/' | append: author.facebook_username | append: '",' %}
-        {% endif %}
-        {% if author.twitter_username %}
-            {% assign author_urls = author_urls | append: '"https://twitter.com/' | append: author.twitter_username | append: '",' %}
-        {% endif %}
-        {% if author.medium_username %}
-            {% assign author_urls = author_urls | append: '"https://medium.com/@' | append: author.medium_username | append: '",' %}
-        {% endif %}
-        {% if author.instagram_username %}
-            {% assign author_urls = author_urls | append: '"https://www.instagram.com/' | append: author.instagram_username | append: '",' %}
-        {% endif %}
-        {% if author.linkedin_username %}
-            {% assign author_urls = author_urls | append: '"https://www.linkedin.com/in/' | append: author.linkedin_username | append: '",' %}
-        {% endif %}
-        {% if page.math %}
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-        </script>
-        {% endif %}
-	    
-<script type="application/ld+json">
+<div class="line">Download {{ page.title }}</div>
+<div class="f" title="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABq0lEQVQ4jcWTu4oUQRSGv+rtbVqZGRYU0UUNTJzdXEXYTEMTn8DEVxADAzHcJ9BMMDQUzEQMfAAvmaLBiuiul+2e23ZXV53foMeZNjFZwUqqKM7/nf+cU+UkcZiVHEr9LwApwLunF17ng81N57o8UY8/7MRQXAaqP1QOgNn5a29DCuCUDM9sPUydc6BWjHOE6vu53Vf3PnW7tJINTLHZm3x5fgt4nAIQVGE+q7/eJ/oVSAY41ydfv8L6xe0MCTCQAcIlvZPvn2zdXQIal8g80WfIhB3s0Ex3mey9YDU/BWrAPFIAAv3h7QzZ2UUPcMotHOBnID+lGY/oD2+QH9uYF/zbgVoH6RrEJF0CmoT0yAnWNm4uAoVh/jOheIZiiUKJwgjFCfnpO1CLDkCmWGGzN21wHKNQYM0+iiWEYn4/QnEKqqHpjJEaZAFrvrWZYolCMT/vzzOPFgApQN0FeJkjovBzLiyWtmOJwngptqotM3QA8laE2Y+jzSTrYf1EWgXrg46jWAMeJe3ukkisKuTNLwFVvf3xwfVLiKs4en99uwLcS4/pUTvA//0bfwGJsxx8e5XIkwAAAABJRU5ErkJggg==" alt="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<a href="">Download Server 1</a>
+</div>
+<div class="f" title="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABq0lEQVQ4jcWTu4oUQRSGv+rtbVqZGRYU0UUNTJzdXEXYTEMTn8DEVxADAzHcJ9BMMDQUzEQMfAAvmaLBiuiul+2e23ZXV53foMeZNjFZwUqqKM7/nf+cU+UkcZiVHEr9LwApwLunF17ng81N57o8UY8/7MRQXAaqP1QOgNn5a29DCuCUDM9sPUydc6BWjHOE6vu53Vf3PnW7tJINTLHZm3x5fgt4nAIQVGE+q7/eJ/oVSAY41ydfv8L6xe0MCTCQAcIlvZPvn2zdXQIal8g80WfIhB3s0Ex3mey9YDU/BWrAPFIAAv3h7QzZ2UUPcMotHOBnID+lGY/oD2+QH9uYF/zbgVoH6RrEJF0CmoT0yAnWNm4uAoVh/jOheIZiiUKJwgjFCfnpO1CLDkCmWGGzN21wHKNQYM0+iiWEYn4/QnEKqqHpjJEaZAFrvrWZYolCMT/vzzOPFgApQN0FeJkjovBzLiyWtmOJwngptqotM3QA8laE2Y+jzSTrYf1EWgXrg46jWAMeJe3ukkisKuTNLwFVvf3xwfVLiKs4en99uwLcS4/pUTvA//0bfwGJsxx8e5XIkwAAAABJRU5ErkJggg==" alt="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<a href="{{ page.video }}">Download Server 2</a>
+</div>
+<div class="f" title="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABq0lEQVQ4jcWTu4oUQRSGv+rtbVqZGRYU0UUNTJzdXEXYTEMTn8DEVxADAzHcJ9BMMDQUzEQMfAAvmaLBiuiul+2e23ZXV53foMeZNjFZwUqqKM7/nf+cU+UkcZiVHEr9LwApwLunF17ng81N57o8UY8/7MRQXAaqP1QOgNn5a29DCuCUDM9sPUydc6BWjHOE6vu53Vf3PnW7tJINTLHZm3x5fgt4nAIQVGE+q7/eJ/oVSAY41ydfv8L6xe0MCTCQAcIlvZPvn2zdXQIal8g80WfIhB3s0Ex3mey9YDU/BWrAPFIAAv3h7QzZ2UUPcMotHOBnID+lGY/oD2+QH9uYF/zbgVoH6RrEJF0CmoT0yAnWNm4uAoVh/jOheIZiiUKJwgjFCfnpO1CLDkCmWGGzN21wHKNQYM0+iiWEYn4/QnEKqqHpjJEaZAFrvrWZYolCMT/vzzOPFgApQN0FeJkjovBzLiyWtmOJwngptqotM3QA8laE2Y+jzSTrYf1EWgXrg46jWAMeJe3ukkisKuTNLwFVvf3xwfVLiKs4en99uwLcS4/pUTvA//0bfwGJsxx8e5XIkwAAAABJRU5ErkJggg==" alt="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<a href="//luvaihoo.com/afu.php?zoneid=3762702">Download MP4 HD</a>
+</div>
+<div class="f" title="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABq0lEQVQ4jcWTu4oUQRSGv+rtbVqZGRYU0UUNTJzdXEXYTEMTn8DEVxADAzHcJ9BMMDQUzEQMfAAvmaLBiuiul+2e23ZXV53foMeZNjFZwUqqKM7/nf+cU+UkcZiVHEr9LwApwLunF17ng81N57o8UY8/7MRQXAaqP1QOgNn5a29DCuCUDM9sPUydc6BWjHOE6vu53Vf3PnW7tJINTLHZm3x5fgt4nAIQVGE+q7/eJ/oVSAY41ydfv8L6xe0MCTCQAcIlvZPvn2zdXQIal8g80WfIhB3s0Ex3mey9YDU/BWrAPFIAAv3h7QzZ2UUPcMotHOBnID+lGY/oD2+QH9uYF/zbgVoH6RrEJF0CmoT0yAnWNm4uAoVh/jOheIZiiUKJwgjFCfnpO1CLDkCmWGGzN21wHKNQYM0+iiWEYn4/QnEKqqHpjJEaZAFrvrWZYolCMT/vzzOPFgApQN0FeJkjovBzLiyWtmOJwngptqotM3QA8laE2Y+jzSTrYf1EWgXrg46jWAMeJe3ukkisKuTNLwFVvf3xwfVLiKs4en99uwLcS4/pUTvA//0bfwGJsxx8e5XIkwAAAABJRU5ErkJggg==" alt="{{ page.title }} {{ page.year }} {{ page.language }} {{ page.quality }}">
+<a href="//luvaihoo.com/afu.php?zoneid=3762702">Download 720p</a>
+</div>
+<div class="line">Tags</div>
+<font color="green">
+	{{ page.title }} {{ page.language }} Movie Download HD Tamilrockers isaimini {{ page.language }} HD Movies Download {{ page.title }} {{ page.language }} Movie Collection Download {{ page.title }} Movie Download Watch {{ page.title }} Movie Online {{ page.language }} {{ page.year }} Moviesda  {{ page.title }} Tamilgun {{ page.language }} Movies Download Tamilrockers {{ page.title }} Movie Download Tamilrockers Torrents
+</font>
+<div class="line"> © Tentrockers<br/>All Right
+Reserved</div>
+ <script type="application/ld+json">
 {"@context":"https://schema.org",
 "@type":"VideoObject",
-"description":"{{ page.title }}{{ page.description }}",
+"description":"Watch {{ page.title }} on {{ site.title }} and Download Free",
 "duration":"PT1H56M0S",
 "embedUrl":"{{ page.video }}",
 "name":"{{ page.title }}",
@@ -198,13 +141,11 @@
 "author":"Tentrockers"
 }
 </script>
+	<script>
+    new kwgVideo('#video1');
+</script>
 	   
 	    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',3762709,document.body||document.documentElement)</script>
-    <script type='text/javascript'>
-//<![CDATA[
-function getVideoPlaylist(i){if("undefined"!=typeof $){if(void 0!==i.playerList){var e,s,d=[],t=[],n=[],a=[],l="",o=0,f=0,r=7,c=4,v=50,p=$(i.playerContainer),h=p.width(),g=i.playerRatio.split(":");g=g[1]/g[0];for(var u=0;u<i.playerList.length;u++)d.push(i.playerList[u].file),t.push(i.playerList[u].title),n.push(i.playerList[u].description),a.push(i.playerList[u].image);for(l+='<div class="rst_player">',l+='<div class="rst_video"><span class="rst_loading"><div class="st_loading"><div class="circlex"></div><div class="circley"></div></div></span>',l+='<iframe id="video_player" src="" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>',l+='<div class="rst_server"></div>',l+="</div>",l+='<div class="rst_videos">',l+='<ul class="rst_list"></ul>',l+='<div class="rst_control">',l+='<span class="sd_prevPage rst_button"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i></span>',l+='<span class="sd_prev rst_button"><i class="fas fa-chevron-left"></i></span>',l+='<span class="sd_next rst_button"><i class="fas fa-chevron-right"></i></span>',l+='<span class="sd_nextPage rst_button"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span>',l+="</div>",l+="</div>",l+="</div>",p.html(l),l="",u=0;u<t.length;u++)l+="<li>",l+='<img src="',m(d[u])?l+="http://i3.ytimg.com/vi/"+m(d[u])+"/hqdefault.jpg":d[u].indexOf("vimeo")>-1||d[u].indexOf("vid")>-1||d[u].indexOf("google")>-1?l+="https://1.bp.blogspot.com/-8TcMxpoFBI8/XXfVXz0RfoI/AAAAAAAAAgg/AIlcAyY03T4N2Hy0U1C6yJzmXFVEMzfEgCLcBGAs/s1600/video_logo.jpg":l+=a[u],l+='" />',l+="<div>",l+="<h2>",l+='<i class="',m(d[u])?l+="fab fa-youtube":d[u].indexOf("vimeo")>-1?l+="fab fa-vimeo":d[u].indexOf("google")>-1?l+="fab fa-google-drive":d[u].indexOf("ok.ru")>-1?l+="fas fa-video":d[u].indexOf("facebook")>-1?l+="fab fa-facebook":l+="fa-file",l+="",l+='"></i> ',l+=t[u]+"</h2>",l+="</div>",l+="</li>";for(p.find(".rst_list").html(l),u=0;u<t.length;u++)d[u].indexOf("vimeo")>-1&&$.ajax({type:"GET",url:"http://vimeo.com/api/v2/video/"+d[u].substring(d[u].lastIndexOf("/")+1)+".json",jsonp:"callback",dataType:"jsonp",indexValue:u,success:function(i){var e=i[0].thumbnail_large;p.find(".rst_list").find("li").eq(this.indexValue).find("img").attr("src",e)}});$.getScript("http://f.vimeocdn.com/js/froogaloop2.min.js"),$.getScript("https://www.youtube.com/iframe_api");var _=!1;window.onYouTubeIframeAPIReady=function(){y()},p.find(".rst_list").click(function(){s=!0}),p.find(".rst_list").find("li").outerHeight(v),p.find(".rst_list").find("li").each(function(i){$(this).click(function(){var e,t;o=i,p.find(".rst_list").find("li").eq(i).hasClass("selected")||(p.find(".rst_list").find("li").removeClass("selected").eq(i).addClass("selected"),t=e=d[i],p.find(".rst_server").find("video").remove(),p.find(".rst_server").hide(),p.find("iframe").attr("src","").hide(),p.find(".rst_loading").show(),m(e)?(t="https://www.youtube.com/embed/"+m(e)+"?autoplay=1&loop=1&showinfo=0&rel=0&enablejsapi=1",s&&(t="https://www.youtube.com/embed/"+m(e)+"?autoplay=1&loop=1&showinfo=0&rel=0&enablejsapi=1"),p.find("iframe").attr("src",t).show(),_&&y()):e.indexOf("vimeo")>-1?(t="https://player.vimeo.com/video/"+e.substring(e.lastIndexOf("/")+1),s?p.find("iframe").attr("src",t+"?api=1&amp;player_id=video_player&amp;autoplay=1").show():p.find("iframe").attr("src",t+"?api=1&amp;player_id=video_player").show(),void 0!==p.find("iframe")[0].addEvent&&p.find("iframe")[0].addEvent("ready",function(i){p.find("iframe")[0].addEvent("finish",function(){s=!0,k()})})):e.indexOf("google")>-1?p.find("iframe").attr("src",t).show():e.indexOf("vid")>-1?p.find("iframe").attr("src",t).show():(l="",l+=s?'<video width="100%" height="100%" controls autoplay>':'<video width="100%" height="100%" controls>',l+='<source src="'+t.replace(".ogg",".mp4")+'" type="video/mp4">',l+='<source src="'+t.replace(".mp4",".ogg")+'" type="video/ogg">',l+="</video>",p.find(".rst_server").show().html(l),p.find("video").bind("ended",function(){s=!0,k()})),p.find("iframe").load(function(){p.find(".rst_loading").hide()}),w())})}),w(),$(window).resize(function(){b()}),b(),p.find(".rst_list").scroll(function(){x($(this))}),x(p.find(".rst_list")),p.find(".sd_prevPage").click(function(){$(this).hasClass("active")&&(f=p.find(".rst_list").scrollTop()-e*p.find(".rst_list").find("li").outerHeight(),f=Math.ceil(f/v),p.find(".rst_list").animate({scrollTop:f*v},500))}),p.find(".sd_prev").click(function(){o>0&&(o--,w(),O("prev"),p.find(".rst_list").find("li").eq(o).trigger("click"))}),p.find(".sd_next").click(function(){o<d.length-1&&(o++,w(),O("next"),p.find(".rst_list").find("li").eq(o).trigger("click"))}),p.find(".sd_nextPage").click(function(){$(this).hasClass("active")&&(f=p.find(".rst_list").scrollTop()+e*v,f=Math.ceil(f/v),p.find(".rst_list").animate({scrollTop:f*v},500))}),p.find(".rst_list").animate({scrollTop:0},10),p.find(".rst_list").find("li").eq(0).trigger("click"),$(document).ready(function(){$("").remove()})}}else alert("Please insert jQuery library!");function m(i){return i.indexOf("watch?v")>-1?i.substring(i.indexOf("?v=")+3):(i.indexOf("youtube")>-1||i.indexOf("youtu.be")>-1)&&i.substring(i.lastIndexOf("/")+1)}function y(){_=!0,new YT.Player("video_player",{events:{onStateChange:function(i){switch(i.data){case YT.PlayerState.ENDED:s=!0,k()}}}})}function w(){o>0?p.find(".sd_prev").addClass("active"):p.find(".sd_prev").removeClass("active"),o<d.length-1?p.find(".sd_next").addClass("active"):p.find(".sd_next").removeClass("active")}function b(){$(window).width()<i.playerMobile||!i.playerResponsive?(e=c,i.playerResponsive&&p.width($(window).width()),p.removeClass("rst_desktop"),p.find(".rst_list").height(e*v),p.find(".rst_video").height(p.find(".rst_video").width()*g),p.find(".rst_video").width("100%"),p.find(".rst_videos").width("100%")):(e=r,p.addClass("rst_desktop"),p.width(h),p.find(".rst_list").height(e*(v-.8)),p.find(".rst_video").height(p.find(".rst_videos").outerHeight()),p.find(".rst_video").css("width",i.playerDesktop),p.find(".rst_videos").css("width",100-parseInt(i.playerDesktop)+"%"))}function x(i){i.scrollTop()>0?p.find(".sd_prevPage").addClass("active"):p.find(".sd_prevPage").removeClass("active"),i[0].scrollHeight>=i.outerHeight()+i.scrollTop()+5?p.find(".sd_nextPage").addClass("active"):p.find(".sd_nextPage").removeClass("active")}function O(i){var s=p.find(".rst_list").scrollTop(),d=s+p.find(".rst_list").outerHeight(),t=p.find(".rst_list").find("li").eq(o).offset().top-p.find(".rst_list").find("li").eq(o).parent().offset().top+p.find(".rst_list").find("li").eq(o).outerHeight();return(t+s+10>=d+p.find(".rst_list").find("li").eq(o).outerHeight()||t<1)&&(f=o*v,"prev"==i&&(f=(o-e+1)*v),p.find(".rst_list").animate({scrollTop:f},500)),!0}function k(){o<d.length-1&&(o++,w(),O("next"),p.find(".rst_list").find("li").eq(o).trigger("click"))}}var timer=setInterval(function(){"undefined"!=typeof getPlayerOptions&&(new getVideoPlaylist(getPlayerOptions),clearInterval(timer))},50);
-//]]>
-</script>
-
-	</body>
+    
+</body>
 </html>
