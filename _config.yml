@@ -71,5 +71,5 @@ email: youremail@test.com
 baseurl: ""
 two_columns_layout: true
 menu:
-  - title: Tamil Movies
-    url: /category/tamil-movies
+  - title: Tamil Movies  2012
+    url: /category/tamil-movies-2012
