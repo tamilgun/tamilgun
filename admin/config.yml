@@ -42,7 +42,7 @@ collections:
         format: "YYYY-MM-DD HH:mm:ss"
       - label: "Layout"
         name: "layout"
-        default: "isaipost"
+        default: "post"
       - label: "Title"
         name: "title"
         widget: "string"
