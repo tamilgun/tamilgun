@@ -75,24 +75,11 @@ border : 1px solid silver;
 	<div>
 
 {% for post in paginator.posts %}
-<div itemscope itemprop="VideoObject" itemtype="https://schema.org/VideoObject">
-	<meta itemprop="name" content="{{ page.title }}" />
-	<meta itemprop="duration" content="PT1H56M0S" />
-	<meta itemprop="description" content="Watch {{ page.title }} on {{ site.title }} and Download Free" />
-	<meta itemprop="embedUrl" content="{{ page.video }}" />
-	<meta itemprop="contentUrl" content="{{ page.video }}" />
-	<meta itemprop="thumbnailUrl" content="{{ page.poster }}" />
-	<meta itemprop="uploadDate" content="{{ page.date | date: '%Y-%m-%d/' }}" />
-	<meta itemprop="genre" content="Entertainment" />
-	<meta itemprop="author" content="Tentrockers" />
-
 	<div style=" text-transform: capitalize;" class="f">
 	 
 	<b>{{ post.title }} ({{ post.year }}) [{{ post.quality }}] </b> Latest {{ post.language }} Movie Download HD Movie Mp4 HD <a href="{{ BASE_PATH }}{{ post.url }}"><span style="color: green;">Download Now</span></a>
 		
-		</div></div>
-
-
+		</div>
 {% endfor %}  
 {% include pagination-home.html %}
            </div>
@@ -112,5 +99,53 @@ border : 1px solid silver;
 </div>
 </div>
 <div class="line"> © Tentrockers<br/>All Right Reserved</div>
+	
+	
+	<script type="application/ld+json">
+	{
+        "@type": "ItemList",
+        "itemListElement": [
+        {% assign limit = 8 %}
+        {% for post in posts limit: limit %}
+            {% assign author = site.authors | where: "name", post.author | first %}
+            {
+                "@type": "BlogPosting",
+                "name": "{{ post.title }}",
+                "headline": "{{ post.subtitle }}",
+                "description": "{{ post.description }}",
+                "image": "{{ post.image }}",
+                "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
+                "inLanguage": "{{ site.language }}",
+                "dateCreated": "{{ post.date | date: '%Y-%m-%d/' }}",
+                "datePublished": "{{ post.date | date: '%Y-%m-%d/' }}",
+                "dateModified": "{{ post.date | date: '%Y-%m-%d/' }}",
+                "author": {
+                    "@type": "Person",
+                    "name": "{{ author.display_name }}",
+                    "url": "{{ author.url | prepend: site.baseurl | prepend: site.url }}"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "{{ site.name }}",
+                    "url": "{{ site.url }}{{site.baseurl}}/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{ site.url }}{{site.baseurl}}/assets/img/blog-image.png",
+                        "width": "600",
+                        "height": "315"
+                    }
+                },
+                "mainEntityOfPage": "True",
+                "genre": "{{ post.category | capitalize }}",
+		        "articleSection": "{{ post.category | capitalize }}",
+                "keywords": [{{ post.tags | join: '","' | append: '"' | prepend: '"' }}]
+            }{% if forloop.last == false  %},{% endif %}
+        {% endfor %}
+        ]
+    }
+  }
+}
+</script>
+	
 </body>
 </html>
