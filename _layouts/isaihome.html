@@ -110,12 +110,12 @@ border : 1px solid silver;
             {% assign author = site.authors | where: "name", post.author | first %}
            {"@context":"https://schema.org",
 "@type":"VideoObject",
-"description":"Watch {{ page.title }} on {{ site.title }} and Download Free",
+"description":"Watch {{ post.title }} on {{ site.title }} and Download Free",
 "duration":"PT1H56M0S",
-"embedUrl":"{{ page.video }}",
-"name":"{{ page.title }}",
-"thumbnailUrl":["{{ page.poster }}"],
-"uploadDate":"{{ page.date | date: '%Y-%m-%d/' }}",
+"embedUrl":"{{ post.video }}",
+"name":"{{ post.title }}",
+"thumbnailUrl":["{{ post.poster }}"],
+"uploadDate":"{{ post.date | date: '%Y-%m-%d/' }}",
 "genre":"Entertainment",
 "author":"Tentrockers"
             }{% if forloop.last == false  %},{% endif %}
