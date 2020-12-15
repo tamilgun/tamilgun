@@ -4,6 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	{% if site.paginate %}
+    {% assign posts = paginator.posts | where_exp:"post","post.is_generated != true" %}
+{% else %}
+    {% assign category = site.category | where_exp:"category","post.is_generated != true" %}
+{% endif %}
+	
     {% assign title = '' %}
     {% if page.layout == 'author' %}
         {% assign title = page.display_name %}
@@ -127,8 +133,9 @@ border : 1px solid silver;
     </head>
     <body class="main-page has-push-menu">
         <div class="line"><font size="4px">{{ site.name }}</font><br/><small>Name Of Quality</small></div>
-
+{% for post in paginator.category %}
                     {% assign posts = site.posts | where_exp:"post","post.is_generated != true" %}
+	    
                     {% for post in posts %}
                         {% if post.category == page.slug %}
                             
@@ -147,6 +154,8 @@ border : 1px solid silver;
 "author":"Tentrockers"
 }
 </script>
+		{% endfor %}  
+{% include pagination-home.html %}
 	    </div>
         
                         {% endif %}
