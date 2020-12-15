@@ -7,7 +7,7 @@
 	{% if site.paginate %}
     {% assign posts = paginator.posts | where_exp:"post","post.is_generated != true" %}
 {% else %}
-    {% assign category = site.category | where_exp:"category","post.is_generated != true" %}
+    {% assign posts = site.posts | where_exp:"post","post.is_generated != true" %}
 {% endif %}
 	
     {% assign title = '' %}
@@ -40,7 +40,7 @@
         {% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
     {% endif %}
 
-    <title>{{ title }} Movies Download HD Tamilrockers Moviesda</title>
+    <title>{{ page.title }} Movies Download HD Tamilrockers Moviesda</title>
     <meta name="description" content="{{ description }}">
     {% if page.tags %}
         <meta name="keywords" content="{{ page.tags | join: ', ' }}">
@@ -136,7 +136,7 @@ border : 1px solid silver;
 	    <script async src="https://cse.google.com/cse.js?cx=159b3362f706a3d04"></script>
 <div class="gcse-search"></div>
 <div class="line">Tamilblasters</div>
-{% for post in paginator.category %}
+
                     {% assign posts = site.posts | where_exp:"post","post.is_generated != true" %}
 	    
                     {% for post in posts %}
@@ -157,8 +157,6 @@ border : 1px solid silver;
 "author":"Tentrockers"
 }
 </script>
-		{% endfor %}  
-{% include pagination-home.html %}
 	    </div>
         
                         {% endif %}
